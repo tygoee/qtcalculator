@@ -14,13 +14,13 @@ This is a simple calculator to learn qt
 Clone the git repository
 
 ```sh
-git clone https://github.com/tygoee/tygoee
+git clone https://github.com/tygoee/qtcalculator
 ```
 
 Prepare the build
 
 ```sh
-cmake . -DCMAKE_PREFIX_PATH=~/Qt/6.6.1/gcc_64 -B ./build
+cmake src/ -DCMAKE_PREFIX_PATH=~/Qt/6.6.1/gcc_64 -B ./build
 ```
 
 Build the program
