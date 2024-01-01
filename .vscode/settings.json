@@ -1,9 +1,5 @@
 {
-    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
-    "files.associations": {
-        "qapplication": "cpp",
-        "qmainwindow": "cpp"
-    },
+    "C_Cpp.autoAddFileAssociations": false,
     "code-runner.executorMap": {
         // Currently only for linux
         "cpp": "cmake src/ -DCMAKE_PREFIX_PATH=~/Qt/6.6.1/gcc_64 -B ./build && ~/Qt/Tools/CMake/bin/cmake --build ./build --target all && ./build/qtcalculator",
