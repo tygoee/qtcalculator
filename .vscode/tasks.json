@@ -7,14 +7,17 @@
             "label": "prepare",
             "type": "shell",
             "command": "cmake",
-            "args": [
-                "${workspaceFolder}/src",
-                "-DCMAKE_PREFIX_PATH=~/Qt/6.6.1/gcc_64",
-                "-DCMAKE_BUILD_TYPE=Debug",
-                "-DCMAKE_CXX_FLAGS=-g",
-                "-B",
-                "${workspaceFolder}/build"
-            ],
+            "linux": {
+                "args": [
+                    "${workspaceFolder}/src",
+                    // ~/Qt is the default install directory
+                    "-DCMAKE_PREFIX_PATH=${env:HOME}/Qt/6.6.1/gcc_64",
+                    "-DCMAKE_BUILD_TYPE=Debug",
+                    "-DCMAKE_CXX_FLAGS=-g",
+                    "-B",
+                    "${workspaceFolder}/build"
+                ]
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -23,7 +26,8 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "~/Qt/Tools/CMake/bin/cmake",
+            // ~/Qt is the default install directory
+            "command": "${env:HOME}/Qt/Tools/CMake/bin/cmake",
             "args": [
                 "--build",
                 "${workspaceFolder}/build",
@@ -36,7 +40,7 @@
             }
         },
         {
-            "label": "pre-launch",
+            "label": "prepare-and-build",
             "dependsOrder": "sequence",
             "dependsOn": [
                 "prepare",

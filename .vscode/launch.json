@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "pre-launch",
+            "preLaunchTask": "prepare-and-build",
             "miDebuggerPath": "gdb",
         }
     ]

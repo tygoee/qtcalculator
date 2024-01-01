@@ -22,6 +22,11 @@ private:
     Ui::MainWindow *ui;
 
 private slots:
-    void digit_pressed();
+    void digit_released();
+    void unary_operator_released();
+    void binary_operation_released();
+
+    void on_pushButton_clear_released();
+    void on_pushButton_decimal_released();
 };
 #endif // MAINWINDOW_H

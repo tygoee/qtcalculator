@@ -25,7 +25,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>19</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -67,7 +67,7 @@
      <string>+/-</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_modulus">
+   <widget class="QPushButton" name="pushButton_percent">
     <property name="geometry">
      <rect>
       <x>120</x>
